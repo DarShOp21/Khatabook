@@ -21,24 +21,32 @@ app.get('/create', (req, res) => {
     res.render('createhisaab');    
 })
 
-app.post('/createhisaab', (req, res) => {
+app.post('/createhisaab', (req, res) => {    
+    let filename;
+
     if(req.body.date != "on"){
-        fs.writeFile(`./hisaab/${req.body.filename}.txt`, req.body.content, (err, files) => {
-            if(err) return res.status(500).send(err);
-            res.redirect('/');
-        });
+        filename = req.body.filename;
     } else {
         const today = new Date();
         const date = today.getDate();
-        const month = today.getMonth()+1;
+        const month = today.getMonth() + 1;
         const year = today.getFullYear();
-        const compDate = `${date}-${month}-${year}`;
-        fs.writeFile(`./hisaab/${compDate}.txt`, req.body.content, (err, files) => {
-            if(err) return res.status(500).send(err);
-            res.redirect('/');
-        });
-    }  
-})
+        filename = `${date}-${month}-${year}`;
+    }
+
+    let counter = 1;
+    let fullPath = `./hisaab/${filename}.txt`;
+
+    while(fs.existsSync(fullPath)){
+        fullPath = `./hisaab/${filename}(${counter}).txt`;
+        counter++;
+    }
+
+    fs.writeFile(fullPath, req.body.content, (err) => {
+        if(err) return res.status(500).send(err);
+        res.redirect('/');
+    });
+});
 
 app.get('/delete/:filename', (req, res) => {
     fs.unlink(`./hisaab/${req.params.filename}`, (err) => {
