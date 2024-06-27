@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/view.css">
+    <title><%= filename.split('.')[0] %></title>
+</head>
+<body>
+    <div id="nav">
+        <h1>Khatabook</h1>
+        <div id="right">
+            <a href="/"><h3>Home</h3></a>
+            <a href="/create"><h3 id="new" >Create New Hisab</h3></a>   
+        </div>
+    </div>
+    <h2>Hisaab of <%= filename.split('.')[0] %> </h2>
+    <div id="content">
+        <h3 ><%= content %></h3>
+    </div>
+    <a href='/edit/<%= filename%>' id="edit"><h3>Edit Hisaab</h3></a>
+</body>
+</html>

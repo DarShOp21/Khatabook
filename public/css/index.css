@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#nav{
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    padding: 0 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:focus, a:active {
+    outline: none;
+    background-color: inherit;
+    color: inherit; 
+  }
+
+#nav h1{
+    font-size: 27px;
+    font-weight: 600;
+}
+
+#right{
+    display: flex;
+    gap: 23px;
+}
+
+#right h3{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+h2{
+    position: absolute;
+    top: 20%;
+    left: 78px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+#hisabs{
+    position: absolute;
+    top: 27%;
+    left: 78px;  
+}
+
+#hisabs h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#hisab{
+    position: relative;
+    height: 60px;
+    width: 480px;
+    background-color: rgb(23, 113, 222);
+    border-radius: 10px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#file{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#file h2{
+    color: white;
+    font-size: 20px;
+    margin-top: 4px;
+    margin-left: -62px;
+}
+
+#file i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    color: rgb(23, 113, 222);
+    margin-left: 130px;
+}
+
+#operations{
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+#operations #edit{
+    color: white;
+    font-size: 22px;
+}
+
+#operations #delete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(226, 23, 23);
+    font-size: 22px;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: #fff;
+}

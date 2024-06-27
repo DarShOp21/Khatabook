@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#nav{
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    padding: 0 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:focus, a:active {
+    outline: none;
+    background-color: inherit; /* Ensure no background color change */
+    color: inherit; /* Ensure no text color change */
+  }
+
+#nav h1{
+    font-size: 27px;
+    font-weight: 600;
+}
+
+#right{
+    display: flex;
+    gap: 23px;
+}
+
+#right h3{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+h2{
+    position: absolute;
+    top: 20%;
+    left: 78px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+textarea{
+    resize: none;
+    background-color: rgba(240, 235, 235, 0.506);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 18px;
+    padding-top: 6px;
+    padding-left: 10px;
+}
+
+#filename{
+    position: absolute;
+    top: 25%;
+    left: 78px;
+    width: 25%;
+    height: 4%;
+}
+
+#date{
+    position: absolute;
+    height: 2%;
+    width: 2%;
+    top: 25.7%;
+    left: 30.5%;
+}
+
+form h3{
+    position: absolute;
+    font-size: 17px;
+    font-weight: 500;
+    top: 25.5%;
+    left: 32.5%;
+}
+
+#file-content{
+    position: absolute;
+    top: 31%;
+    left: 78px;
+    width: 50%;
+    height: 37%;
+}
+
+
+
+input{
+    position: absolute;
+    top: 70.5%;
+    left: 78px;
+    border: none;
+    padding: 10px 10px;
+    font-size: 17px;
+    background-color: rgb(23, 113, 222);
+    color: white;
+    border-radius: 10px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Your Khata</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <div id="nav">
+        <h1>Khatabook</h1>
+        <div id="right">
+            <a href="/"><h3>Home</h3></a>
+            <a href="/create"><h3 id="new" >Create New Hisab</h3></a>   
+        </div>
+    </div>
+    <h2>All Hisab Kitaab</h2>
+
+    <div id="hisabs">
+        <% if(files.length != 0){%>
+            <% files.forEach((file) => { %>
+                <div id="hisab">
+                    <div id="file">
+                        <h2><%=file.split('.')[0]%></h2>
+                        <a href="/view/<%= file %>"><i id="enter" class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <div id="operations">
+                        <a href="/edit/<%= file %>"><i id="edit" class="ri-pencil-line"></i></a>
+                        <a href="/delete/<%= file %>"><i id="delete" class="ri-delete-bin-line"></i></a>   
+                    </div>
+                </div>
+            <% })%>
+            
+        <%} else {%>
+            <h3>No hisaab to show, create hisaab to see something</h3>
+        <%}
+        %>
+        
+    </div>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</body>
+</html>
